@@ -14,7 +14,26 @@
 
 */
 
+
+
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  
+  
+
+  background-image: repeating-linear-gradient(to right, #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px);
+   /* Размеры градиента: автоматическая ширина, 100% высота */
+
+  /* Второй градиент: полоски сверху вниз */
+  background-image: repeating-linear-gradient(to bottom, #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px);
+  /* Размеры градиента: 100% ширина, автоматическая высота */
+  /* background-size: 100% auto; */
+  /* Третий градиент: равномерный переход цветов сверху вниз */
+  /* background-image: linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%); */
+  /* Фоновый цвет */
+  /* background-color: #1a1a1a; */
+  
 }
+
+
