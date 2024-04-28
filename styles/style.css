@@ -14,19 +14,34 @@
 
 */
 
+:root {
+  --color-background-card: #fff;
+  --accent-color: #;
+  --color-background: #d3d3d3;
+}
+
 
 
 .page {
-  min-inline-size: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  align-items: center;
+  min-inline-size: 375px;
   min-block-size: 100dvb;
   
   
 
-  background-image: repeating-linear-gradient(to right, #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px);
+  background-image: repeating-linear-gradient(to right, #d3d3d3, transparent 2px),
+                    repeating-linear-gradient(to bottom, #d3d3d3, transparent 2px),
+                    linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
+
    /* Размеры градиента: автоматическая ширина, 100% высота */
+  background-size: cover;
+  
 
   /* Второй градиент: полоски сверху вниз */
-  background-image: repeating-linear-gradient(to bottom, #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px);
+  /* background-image: repeating-linear-gradient(to bottom, #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px); */
   /* Размеры градиента: 100% ширина, автоматическая высота */
   /* background-size: 100% auto; */
   /* Третий градиент: равномерный переход цветов сверху вниз */
@@ -36,4 +51,49 @@
   
 }
 
+/* HEADER */
 
+.header {
+  width: ;
+}
+
+/* MAIN */
+
+.main {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  gap: 50px;
+}
+
+.card-image {
+  width: 100%;
+}
+
+.main-card {
+  width: 50vw;
+  background-color: var(--color-background-card);
+  color: #000;
+}
+
+/* кнопка и тексты */
+
+.card-content {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* тексты */
+
+.card-content__text {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+}
+
+.card-content__buttons {
+ display: flex;
+ gap: 12px;
+ align-self: end;
+}
