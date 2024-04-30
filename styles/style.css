@@ -54,7 +54,7 @@
 /* HEADER */
 
 .header {
-  width: ;
+  width: 48.61vw;
 }
 
 /* MAIN */
@@ -71,7 +71,7 @@
 }
 
 .main-card {
-  width: 50vw;
+  width: 48.33vw;
   background-color: var(--color-background-card);
   color: #000;
 }
