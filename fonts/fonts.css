@@ -6,7 +6,9 @@
         local('Inter-Variable'),
         url("./Inter-Variable.woff2 ")
         format('woff2 supports variations');
+    font-weight: 400 700;
     display: swap;
+    
 }
 
 /* @font-face {
@@ -20,13 +22,14 @@
 } */
 
 @font-face {
-    font-family: 'PressStart2P-Regular';
+    font-family: PressStart2P-Regular, sans-serif;
     src:
         local('PressStart2P'), local('Press Start 2P')
-        url("./PressStart2P-Regular.woff")
+        url(/fonts/PressStart2P-Regular.woff)
         format('woff');
     font-weight: bold;
     display: swap;
+    font-style: normal;
 }
 
 

@@ -4,3 +4,30 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
+
+
+/* Черно-белый цвет */
+:root.theme-light {
+    --color-background-card: #fff;
+    --accent-color: #000;
+    --color-background: #d3d3d3;
+}
+
+/* Зелень в темной теме */
+:root.theme-dark {
+    --accent-color: #00CC14;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --accent-color: #000;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --accent-color: #00CC14;
+    }
+}
+
+

@@ -1,1 +1,17 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+
+:root {
+
+
+    --color-background-card: #fff;
+
+    /* Зеленый в темной */
+    --accent-color: #000;
+    --color-background: #d3d3d3;
+
+    /* шрифты */
+    --content-font: 'Inter-Variable', sans-serif;
+    --huge-title-font: 'PressStart2P', sans-serif;
+    
+  }
