@@ -29,15 +29,16 @@
   align-items: center;
   min-inline-size: 375px;
   min-block-size: 100dvb;
-  
+  font-family: var(--content-font);
   
 
-  background-image: repeating-linear-gradient(to right, #d3d3d3, transparent 2px),
-                    repeating-linear-gradient(to bottom, #d3d3d3, transparent 2px),
+  background-image: repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px),
+                    repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
                     linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
 
    /* Размеры градиента: автоматическая ширина, 100% высота */
   background-size: cover;
+  background-attachment: fixed;
   
 
   /* Второй градиент: полоски сверху вниз */
@@ -63,6 +64,7 @@ html {
 /* HEADER */
 
 .header {
+
   /* width: 48.61vw; */
   width: clamp(365px, 48.61vw, 700px);
   height: clamp(327px, 38.3vh ,369px);
@@ -71,31 +73,50 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-block-start: 100px;
+  padding-block-start: clamp(120px, 14.167vh, 136px);
+  font-family: var(--huge-title-font);
+  font-weight: 400;
+  gap: 25px;
+}
+
+.titles {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
 }
 
 .header-title__1 {
   /* font-size: clamp(45px, 6vw , 65px); */
   /* font-size: clamp(1.8rem, 2.5vw, 2.8rem); */
   font-size: clamp(49px, 4.5vw, 65px); 
-  font-family: var(--huge-title-font);
+  /* font-family: var(--huge-title-font); */
+  /* font-weight: 400; */
+}
+
+.header-title__2 {
   font-weight: 400;
+  font-size: 23px;
 }
 
 .theme-menu {
-  width: 100%;
+  /* width: 100%; */
 }
 
 .theme-menu__list {
   display: flex;
   text-align: left;
   flex-direction: column;
-  align-items: center;
-  width: 100%;
+  align-items: left;
+  gap: 14px;
+  /* width: 100%; */
 }
 
 .theme-menu__button {
   color: var(--accent-color);
   background-color: transparent;
+  font-size: 14px;
 }
 
 .theme-menu__button {
@@ -103,6 +124,7 @@ html {
   border-width: 0;
 }
 
+/* Подчеркивание */
 .theme-menu__button::after {
   content: "";
   position: absolute;
@@ -110,7 +132,7 @@ html {
   left: 0;
   width: 0;
   height: 2px; /* Толщина подчеркивания */
-  background-color: #000; /* Цвет подчеркивания */
+  background-color: var(--accent-color); /* Цвет подчеркивания */
   transition: width 0.6s ease-out; /* Анимация изменения ширины */
 }
 
@@ -118,12 +140,29 @@ html {
   width: 100%;
 }
 
+/* Стрелочка */
 .theme-menu__button:disabled::before {
   content: "▶";
   position: absolute;
   left: -10px;
-  top: 50%;
+  top: 1px;
+  animation: arrow-moving 0.5s ease-out infinite alternate;
 }
+
+@keyframes arrow-moving {
+  from {
+    translate: 0 0;
+  }
+
+  to {
+    translate: -4px 0;
+  }
+}
+
+/* .theme-menu__button:hover:disabled::before {
+  left: -18px;
+  transition: width 0.6s ease-out;
+} */
 
 .theme-menu__item {
   position: relative;
@@ -158,6 +197,14 @@ html {
   color: #000;
 }
 
+.card-title {
+  display: flex;
+  align-items: self-start;
+  text-align: left;
+  padding-inline-start: 10px;
+  
+}
+
 /* кнопка и тексты */
 
 .card-content {
@@ -185,6 +232,28 @@ html {
 
 /* сердце */
 
+.button-heart {
+  background-color: transparent;
+  border: 0;
+}
+
+.button-heart:hover .core{
+  --heart-color-active: black;
+  transition: --heart-color-active 3.3s ease;
+}
+
+/* .card-content:hover {
+  background-color: black;
+  transition: background-color 1.3s ease;
+
+}
+
+.card-content:not(:hover) {
+  transition: background-color 50s ease;
+} */
+
+
+
 .card__icon-button {
   fill: aqua;
 }
@@ -198,15 +267,22 @@ html {
   right: clamp(13px, 1.74vw, 25px);
   top: 25px;
   content: "</HTML>";
+  font-family: var(--huge-title-font);
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 0.5;
+  mix-blend-mode: hard-light;
   text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;;
   
 }
 
-@supports (-webkit-text-stroke-width: 1px) 
-          and (-webkit-text-stroke-color: #ffffff) {
+@supports ((-webkit-text-stroke-width: 1px) 
+          and (-webkit-text-stroke-color: #ffffff)) or (text-stroke: 1px #fff) {
             .card-image__zone::after {
-              -webkit-text-stroke-width: 1px;
+              -webkit-text-stroke-width: 0.01px;
               -webkit-text-stroke-color: #fff;
+              /* -webkit-text-stroke-linecap: ; */
+              text-stroke: 1px #fff
             }
           }
 

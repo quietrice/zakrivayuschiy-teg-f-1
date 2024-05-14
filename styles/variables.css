@@ -10,8 +10,12 @@
     --accent-color: #000;
     --color-background: #d3d3d3;
 
+    /* цвет активного сердца */
+    /* --heart-color-active: #FF0000; */
+    --heart-color-active: #FF0000;
+
     /* шрифты */
     --content-font: 'Inter-Variable', sans-serif;
-    --huge-title-font: 'PressStart2P', sans-serif;
+    --huge-title-font: 'PressStart2P-Regular', sans-serif;
     
   }

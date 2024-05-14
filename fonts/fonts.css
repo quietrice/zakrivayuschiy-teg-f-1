@@ -22,14 +22,24 @@
 } */
 
 @font-face {
-    font-family: PressStart2P-Regular, sans-serif;
+    font-family: "PressStart2P-Regular";
     src:
-        local('PressStart2P'), local('Press Start 2P')
-        url(/fonts/PressStart2P-Regular.woff)
+        local('PressStart2P'), local('Press Start 2P'),
+        url(./PressStart2P-Regular.woff)
         format('woff');
-    font-weight: bold;
+    font-weight: 400;
     display: swap;
     font-style: normal;
 }
 
+
+/* @font-face {
+  font-family: 'Press Start 2P';
+  src:
+    local('Press Start 2P'),
+    url(./PressStart2P-Regular.woff) format('woff');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+} */
 
