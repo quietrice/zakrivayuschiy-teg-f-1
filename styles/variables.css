@@ -17,5 +17,7 @@
     /* шрифты */
     --content-font: 'Inter-Variable', sans-serif;
     --huge-title-font: 'PressStart2P-Regular', sans-serif;
-    
+    /* изменить */
+    --heart-fill: #FF0000;
+    --heart-contour: #000;
   }
